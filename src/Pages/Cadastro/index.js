@@ -1,14 +1,13 @@
 import './styles.css'
 import api from '../../services/api'
-import { useEffect, useState } from 'react';
-import { useHistory , useLocation } from 'react-router-dom';
+import {  useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 
 export function Cadastro(){
 
        
     const history = useHistory();
-    const[lista, setLista] = useState([]);
  
 
     const[nome, setNome]= useState('');
@@ -25,7 +24,8 @@ export function Cadastro(){
     async function fazerCadastro(event){
         event.preventDefault();
         try {
-            const response = await api.post("https://projetofinal01.herokuapp.com/clientes", {nome,sobrenome,email,cidade,bairro,telefone,profissao,senha})           
+            const response = await api.post("https://projetofinal01.herokuapp.com/clientes", {nome,sobrenome,email,cidade,bairro,telefone,profissao,senha})   
+            console.log(response.data.id)        
             alert("Cadastrado com sucesso!")
             history.push(`/Login/`)
 

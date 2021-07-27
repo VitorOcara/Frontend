@@ -1,4 +1,4 @@
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './styles.css'
 export default function Cabecalho(){
     return(

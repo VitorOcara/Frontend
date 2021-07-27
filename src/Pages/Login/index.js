@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react"
-import { Link, Router, useHistory } from "react-router-dom"
+import {  useState } from "react"
+import {  useHistory } from "react-router-dom"
 import api from "../../services/api";
 import './styles.css'
 
@@ -9,7 +9,6 @@ export function Login(){
 
     const[email, setEmail]= useState(''); 
     const[senha, setSenha]= useState(''); 
-    const history = useHistory();
 
    
    

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import api from "../../services/api";
 import './styles.css'
 
@@ -15,7 +15,6 @@ export function Gerenciador(props){
     const[profissao, setProfissao]= useState('');
     const[senha, setSenha]= useState(''); 
 
-    const[info, setInfo] = useState([]);
 
     const history = useHistory();
 
@@ -26,7 +25,6 @@ export function Gerenciador(props){
         ()=>{
             api.get(`https://projetofinal01.herokuapp.com/busca_clientes/${id}`).then(response => {
                 
-                setInfo(response.data)
                 console.log(response.data)
 
                 setNome(response.data.nome);
@@ -42,7 +40,7 @@ export function Gerenciador(props){
 
             }).catch(err => console.log(err))
 
-        }, [])
+        }, [id])
 
 
     async function doAtt(event){

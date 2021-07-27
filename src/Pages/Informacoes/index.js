@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { useHistory , useLocation} from 'react-router-dom';
+import { useLocation} from 'react-router-dom';
 import api from '../../services/api';
 import './styles.css'
 export function Informacoes(props){
@@ -17,7 +17,7 @@ export function Informacoes(props){
                 //console.log(response.data)
             }).catch(err => console.log(err))
 
-        }, [])
+        }, [id])
 
     return(
         <div >

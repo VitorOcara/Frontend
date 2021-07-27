@@ -1,6 +1,5 @@
 import './styles.css'
-import { Link, Router } from "react-router-dom";
-import Cabecalho from '../Cabecalho';
+import { Link,} from "react-router-dom";
 export function TelaPrincipal(){
     return (
         <div className="background">
