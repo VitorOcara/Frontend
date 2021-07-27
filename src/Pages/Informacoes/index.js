@@ -11,7 +11,7 @@ export function Informacoes(props){
     
     useEffect(
         ()=>{
-            api.get(`http://localhost:8393/busca_clientes/${id}`).then(response => {
+            api.get(`https://projetofinal01.herokuapp.com/busca_clientes/${id}`).then(response => {
                 
                 setInfo(response.data)
                 //console.log(response.data)

@@ -13,7 +13,7 @@ export function Selects(){
 
     useEffect(
         ()=>{
-            api.get('http://localhost:8393/clientes').then(response => {
+            api.get('https://projetofinal01.herokuapp.com/clientes').then(response => {
             setLista(response.data)
 
         })

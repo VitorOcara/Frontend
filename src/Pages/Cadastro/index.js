@@ -25,7 +25,7 @@ export function Cadastro(){
     async function fazerCadastro(event){
         event.preventDefault();
         try {
-            const response = await api.post("http://localhost:8393/clientes", {nome,sobrenome,email,cidade,bairro,telefone,profissao,senha})           
+            const response = await api.post("https://projetofinal01.herokuapp.com/clientes", {nome,sobrenome,email,cidade,bairro,telefone,profissao,senha})           
             alert("Cadastrado com sucesso!")
             history.push(`/Login/`)
 

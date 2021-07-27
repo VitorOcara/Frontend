@@ -21,7 +21,7 @@ export function Login(){
             const data = {email, senha}
 
             try{
-                const response = await api.patch(`http://localhost:8393/login`, data)
+                const response = await api.patch(`https://projetofinal01.herokuapp.com/login`, data)
 
                 //const id = 
                 console.log(response.data)

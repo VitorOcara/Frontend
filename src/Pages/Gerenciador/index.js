@@ -24,7 +24,7 @@ export function Gerenciador(props){
    
     useEffect(
         ()=>{
-            api.get(`http://localhost:8393/busca_clientes/${id}`).then(response => {
+            api.get(`https://projetofinal01.herokuapp.com/busca_clientes/${id}`).then(response => {
                 
                 setInfo(response.data)
                 console.log(response.data)
@@ -48,7 +48,7 @@ export function Gerenciador(props){
     async function doAtt(event){
         event.preventDefault();
         try {
-            await api.patch(`http://localhost:8393/clientes/${id}`, {id,nome,sobrenome,email,cidade,bairro,telefone,senha,profissao})
+            await api.patch(`https://projetofinal01.herokuapp.com/clientes/${id}`, {id,nome,sobrenome,email,cidade,bairro,telefone,senha,profissao})
             alert("Atualizado Com sucesso!")
             history.push(`/Gerenciador/${id}` , {id})
         } catch (err) {
@@ -58,7 +58,7 @@ export function Gerenciador(props){
     async function doDelete(event){
         event.preventDefault();
         try {
-             await api.delete(`http://localhost:8393/clientes/${id}`)
+             await api.delete(`https://projetofinal01.herokuapp.com/clientes/${id}`)
         alert("DELETADO COM SUCESSO!");
             history.push("/")
         } catch (err) {
