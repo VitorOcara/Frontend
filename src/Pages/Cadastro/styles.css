@@ -1,0 +1,18 @@
+.back{
+    align-content: center;
+    align-items: center;
+    width: 800px;
+}
+.text{
+    margin-top: 40px;
+    width: 260px;
+    border-radius: 10px;
+    background-color: rgba(0, 255, 255, 0.568);
+}
+.box1{
+    width: 500px;
+    padding-top: 30px;
+    border-radius: 10px;
+    padding-bottom: 30px;
+    background-color: rgba(0, 255, 255, 0.568);
+}

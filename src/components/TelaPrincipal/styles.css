@@ -1,0 +1,23 @@
+.background{
+    align-items: center;
+
+    height: 500px;
+    background-color: rgba(109, 241, 234, 0.616);
+    border-radius: 20px;
+    margin-left: 20px;
+}
+.background.h1{
+    font-size: 20px;
+}
+.funcionalidades{
+    width:800px;
+    margin-left: 10px;
+    text-align: left;
+    margin-right: 10px;
+    display: inline-block;
+}
+.link{
+    width:580px;
+    background-color: rgba(7, 14, 70, 0.39);
+    border-radius: 10px;
+}
